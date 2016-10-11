@@ -1,0 +1,33 @@
+body {
+  background-color: #f3f3f3;
+  text-align: center;
+  margin-top: 200px; }
+  body .hexagon-draw {
+    display: inline-block;
+    margin-right: 10px; }
+    body .hexagon-draw .hexagon-construct-top {
+      width: 0;
+      border-bottom: 25.98076px solid #ff1744;
+      border-left: 45px solid transparent;
+      border-right: 45px solid transparent; }
+    body .hexagon-draw .hexagon-construct-middle {
+      width: 90px;
+      height: 54px;
+      height: 51.96152px;
+      background-color: #ff1744; }
+    body .hexagon-draw .hexagon-construct-bottom {
+      width: 0;
+      border-top: 25.98076px solid #ff1744;
+      border-left: 45px solid transparent;
+      border-right: 45px solid transparent; }
+    body .hexagon-draw .hexagon-picture {
+      position: relative;
+      top: -74.7px;
+      height: 0; }
+      body .hexagon-draw .hexagon-picture img {
+        max-height: 45px; }
+
+svg {
+  fill: ffaa22; }
+
+/*# sourceMappingURL=style.css.map */

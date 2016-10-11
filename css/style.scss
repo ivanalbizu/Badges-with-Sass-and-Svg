@@ -1,0 +1,49 @@
+@mixin badge-generator($width: 94, $color: #ff1744, $margin_top: 0) {
+	$middle_width: $width/2;
+	$height: ($width/2) * 1.154700538;
+	$border_top: $height/2;
+
+	text-align: center; //center image
+	margin-top: unquote( $margin_top + 'px');
+
+	.hexagon-draw {
+		display: inline-block;
+		margin-right: 10px;
+
+		.hexagon-construct-top {
+			width: 0;
+			border-bottom: unquote( $border_top + 'px') solid $color;
+			border-left: unquote( $middle_width + 'px') solid transparent;
+			border-right: unquote( $middle_width + 'px') solid transparent;
+		}
+		.hexagon-construct-middle {
+			width: unquote( ($width) + 'px');
+			height: 54px;//width/2*1,154700538
+			height: unquote( ( ($width/2) * 1.154700538 ) + 'px');
+			background-color: $color;
+		}
+		.hexagon-construct-bottom {
+			width: 0;
+			border-top: unquote( $border_top + 'px') solid $color;
+			border-left: unquote( $middle_width + 'px') solid transparent;
+			border-right: unquote( $middle_width + 'px') solid transparent;
+		}
+		.hexagon-picture {
+			position: relative;
+			top: unquote( (-0.83 * $width) + 'px');
+			height: 0;
+			img {
+				max-height: unquote( $middle_width + 'px');
+			}
+		}
+	}
+}
+
+
+body {
+  background-color: #f3f3f3;
+  @include badge-generator(90, #ff1744, 200);
+}
+svg {
+	fill: ffaa22;
+}
